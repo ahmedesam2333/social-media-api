@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "fc7be563-1ffb-4555-9f52-e4b26d5c40c4",
+		"name": "Social Medai API",
+		"description": "all apis for the project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33499743"
+	},
+	"item": [
+		{
+			"name": "Login User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"a@gmail.com\",\r\n    \"password\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/users/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"a@gmail.com\",\r\n    \"password\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/users/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Unfollow User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Y2NjNDRkNjA2ZTc2ZWU4NTQ2YmVmNCIsImlhdCI6MTc0MTQ3MjkxMCwiZXhwIjoxNzQ0MDY0OTEwfQ.HfQmkCnTWfOo8OIxr7DUH8Z5Yp_mKY8PoI288uTRovo"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:8080/api/users/67ccc446606e76ee8546bef1/unfollow"
+			},
+			"response": []
+		},
+		{
+			"name": "follow user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Y2NjNDRkNjA2ZTc2ZWU4NTQ2YmVmNCIsImlhdCI6MTc0MTQ3MjkxMCwiZXhwIjoxNzQ0MDY0OTEwfQ.HfQmkCnTWfOo8OIxr7DUH8Z5Yp_mKY8PoI288uTRovo"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:8080/api/users/67ccc446606e76ee8546bef1/follow"
+			},
+			"response": []
+		},
+		{
+			"name": "update profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Y2NjNDRkNjA2ZTc2ZWU4NTQ2YmVmNCIsImlhdCI6MTc0MTQ3MjkxMCwiZXhwIjoxNzQ0MDY0OTEwfQ.HfQmkCnTWfOo8OIxr7DUH8Z5Yp_mKY8PoI288uTRovo"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/users/update"
+			},
+			"response": []
+		},
+		{
+			"name": "get user profile",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/users/67ccc446606e76ee8546bef1"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Y2NjNDQ2NjA2ZTc2ZWU4NTQ2YmVmMSIsImlhdCI6MTc0MTQ3MzUwNiwiZXhwIjoxNzQ0MDY1NTA2fQ.KE8X_yYoVWG5U86howXbZF3HCSu-TJgYoojtm47YEr0"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\":\"hi\",\r\n    \"user\":\"67ccc446606e76ee8546bef1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/posts"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Posts",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/posts"
+			},
+			"response": []
+		},
+		{
+			"name": "like post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Y2NjNDQ2NjA2ZTc2ZWU4NTQ2YmVmMSIsImlhdCI6MTc0MTQ3MzUwNiwiZXhwIjoxNzQ0MDY1NTA2fQ.KE8X_yYoVWG5U86howXbZF3HCSu-TJgYoojtm47YEr0"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"url": "http://localhost:8080/api/posts/67ccc71b606e76ee8546bf10/like"
+			},
+			"response": []
+		},
+		{
+			"name": "share post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Y2NjNDQ2NjA2ZTc2ZWU4NTQ2YmVmMSIsImlhdCI6MTc0MTQ3MzUwNiwiZXhwIjoxNzQ0MDY1NTA2fQ.KE8X_yYoVWG5U86howXbZF3HCSu-TJgYoojtm47YEr0"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"url": "http://localhost:8080/api/posts/67ccc71b606e76ee8546bf10/share"
+			},
+			"response": []
+		},
+		{
+			"name": "add comment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Y2NjNDQ2NjA2ZTc2ZWU4NTQ2YmVmMSIsImlhdCI6MTc0MTQ3MzUwNiwiZXhwIjoxNzQ0MDY1NTA2fQ.KE8X_yYoVWG5U86howXbZF3HCSu-TJgYoojtm47YEr0"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\":\"67ccc446606e76ee8546bef1\",\r\n    \"text\":\"hello\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/posts/67ccc71b606e76ee8546bf10/comment"
+			},
+			"response": []
+		},
+		{
+			"name": "delete post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Y2NjNDQ2NjA2ZTc2ZWU4NTQ2YmVmMSIsImlhdCI6MTc0MTQ3MzUwNiwiZXhwIjoxNzQ0MDY1NTA2fQ.KE8X_yYoVWG5U86howXbZF3HCSu-TJgYoojtm47YEr0"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/api/posts/67ccc71b606e76ee8546bf10"
+			},
+			"response": []
+		}
+	]
+}
